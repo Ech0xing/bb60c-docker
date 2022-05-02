@@ -23,7 +23,7 @@ Bus 004 Device 002: ID 2817:0005 Cypress FX3
 [...]
 ```
 
-Then create a Docker container from the `herrameise:bb60c` image, passing in the Signal Hounds USB information as well as the `examples/` directory from the repository. Unfortunately, Docker does not allow mounting host directories via relative path, so you will need to specify the full path for the `examples/` directory in the `bb60c-docker` repository. In my case, I had cloned the repository into `~/Downloads/`, so the full path would be `/home/$USER/Downloads/bb60c-docker/examples/`.
+Then create a Docker container from the `herrameise:bb60c` image, passing in the Signal Hound USB information as well as the `examples/` directory from the repository. Unfortunately, Docker does not allow mounting host directories via relative path, so you will need to specify the full path. In my case, I had cloned the repository into `~/Downloads/`, so the full path would be `/home/$USER/Downloads/bb60c-docker/examples/`.
 
 ```bash
 bb60c-docker/$ docker run \
@@ -34,7 +34,7 @@ bb60c-docker/$ docker run \
     bash
 ````
 
-Once in the container, navigate to `/root/examples` and build/run the desired examples:
+Once in the container, navigate to `/root/examples` and build/run the example(s):
 
 ```bash
 root@26a665115141:~# cd /root/examples/
